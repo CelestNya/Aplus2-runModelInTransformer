@@ -1,0 +1,26 @@
+[project]
+name = "Aplus2-runModelInTransformer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.13.0",
+    "bitsandbytes>=0.41.0",
+    "device-smi>=0.5.3",
+    "threadpoolctl>=3.6.0",
+    "torch",
+    "transformers",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu130"
+name = "pytorch"
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
